@@ -1,6 +1,8 @@
 import { Card, CardBody, CardTitle, Form, FormGroup, FormFeedback, Input, Button } from "reactstrap";
 import { useEffect } from "react";
 import { useState } from "react";
+
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -8,10 +10,11 @@ const Login = () => {
   const [status, setStatus] = useState(false);
 
   const [userError, setUserError] = useState(false);
-  const [isValid, setValid] = useState(false);
 
   const handleSubmit = (e)=>{
-    console.log(e);
+    // console.log(e);
+    e.preventDefault();
+    // loginUser(username, password);
   }
   return (
     <section className="login bg-dark w-100 d-flex justify-content-center align-items-center" style={{ height: "100vh" }}>
