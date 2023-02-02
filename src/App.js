@@ -4,11 +4,12 @@ import Register from "./Components/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar, NavLink } from "reactstrap";
 import { Link } from "react-router-dom";
+import Books from "./Components/Books";
 function App() {
   return (
     <div className="">
       <Router>
-        <nav className="p-4 bg-dark d-flex justify-content-between px-4 fixed-top ">
+        <nav className="p-4 bg-dark d-flex justify-content-between px-4 sticky-top ">
         <h1 className="text-light">Book Store</h1>
           <div className="">
             <Link
@@ -43,6 +44,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/books" element={<Books/>}></Route>
         </Routes>
       </Router>
     </div>

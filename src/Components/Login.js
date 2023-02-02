@@ -1,7 +1,7 @@
 import { Card, CardBody, CardTitle, Form, FormGroup, FormFeedback, Input, Button } from "reactstrap";
 import { useEffect } from "react";
 import { useState } from "react";
-
+import UserServices, { loginUser } from '../Services/UserServices';
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -61,7 +61,7 @@ const Login = () => {
               />
               <FormFeedback>"Error"</FormFeedback>
             </FormGroup>
-            <Button className="btn-success w-100">Login</Button>
+            <Button className="btn-success w-100" onClick={()=>{UserServices.loginUser(username, password)}}>Login</Button>
           </Form>
         </CardBody>
       </Card>

@@ -5,12 +5,10 @@ const loginUser = (username, password) => {
   axios.post("http://localhost:3000/users/login", {
     username: username,
     password: password,
-  });
+  })
+  .then(res=>{
+    console.log(res.status)
+  })
 };
 
-
-const ret = {
-    'loginUser': loginUser,
-}
-
-export default loginUser;
+export default { loginUser };
